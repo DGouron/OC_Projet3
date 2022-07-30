@@ -1,0 +1,38 @@
+{
+  "name": "oc_projet3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./src/Assets/Styles/Sass/main.scss:./src/Assets/Styles/css/style.css",
+    "prefix": "postcss ./src/Assets/Styles/css/style.css --use autoprefixer -d ./src/Assets/Styles/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DGouron/OC_Projet3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DGouron/OC_Projet3/issues"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "last 4 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 4 versions"
+    ]
+  },
+  "homepage": "https://github.com/DGouron/OC_Projet3#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
