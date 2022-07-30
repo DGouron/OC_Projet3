@@ -1,7 +1,9 @@
 html,
-body,
-.app {
+body {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+
+/*For other format*/
 
 /*# sourceMappingURL=style.css.map */
