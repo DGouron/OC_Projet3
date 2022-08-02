@@ -1,20 +1,49 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 
+*{
+  box-sizing: border-box;
+}
 html,
 body{
-  box-sizing: border-box;
   scroll-behavior: smooth;
   color: white;
 }
-header{
+.primary__header{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 60px;
-  background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  height: 5%;
+  
+  .primary__header--logo, .primary__header--title{
+    flex: 1 1 50%;
+    width: 100%;
+  }
+  .primary__header--logo{
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+
+    h1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .primary__header--title{
+    text-align: center;
+    background: #eaeaea;
+
+    h2{
+      font-size: $title-font-size;
+      color: #676767;
+    }
+  }
+}
+.link__calltoaction{
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  background:  $cta-background;
 }
 /*For other format*/
 @media only screen and (min-width: 768px){
