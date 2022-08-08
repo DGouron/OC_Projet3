@@ -1,0 +1,29 @@
+@import "./callToAction";
+.hero__banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: $light-color;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  
+    h1{
+      font-family: $secondary-font;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    h2{
+      font-family: $secondary-font;
+      font-size: 18px;
+      font-weight: 200;
+    }
+    a{
+        @extend .link__calltoaction;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  }

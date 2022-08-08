@@ -1,0 +1,168 @@
+.body__content{
+    opacity: 1;
+    animation-delay: 4s;
+    animation-name: load-bodyContent;
+    animation-duration: 3s;
+}
+.loader_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: $color-primary;
+    opacity: 1;
+    animation-delay: 5s;
+    animation-name: loading-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-name: load;
+    animation-duration: 3s;
+
+    img{
+        width: 100%;
+        margin: 0;
+        height: auto;
+        filter: opacity(0.6) drop-shadow(0 0 0 $color-primary);
+        z-index: 2;
+    }
+    p{
+        z-index: 2;
+        text-shadow: 0 0 0 $color-primary;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 1.2px;
+    }
+}
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 0 $color-primary);
+
+    .face{
+        position: absolute;
+        border: 2px solid #121212;
+    }
+    .face.face1{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #090909;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        border-radius: 50%;
+        border-left: 2px solid #ffff00;
+        border-top: 2px solid #ffff00;
+        animation: animateCircle 3s linear infinite;
+    }
+    .face.face2{
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: #090909;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        border-radius: 50%;
+        border-right: 2px solid $color-primary;
+        border-bottom: 2px solid $color-primary;
+        animation: animateCircle 3s linear reverse infinite;
+    }
+    .face .circle{
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        transform-origin: left;
+    }
+    .face .circle::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        top: -4px;
+        right: -6px;
+    }
+    .face.face1 .circle{
+        transform: rotate(-45deg);
+    }
+    .face.face1 .circle::before{
+        background: #ffff00;
+        box-shadow: 0 0 20px #ff0, 
+                    0 0 40px #ff0,
+                    0 0 60px #ff0,
+                    0 0 80px #ff0,
+                    0 0 100px #ff0,
+                    0 0 0 5px rgba(255,255,0,.1);
+    }
+    .face.face2 .circle{
+        transform: rotate(-45deg);
+    }
+    .face.face2 .circle::before{
+        background: $color-primary;
+        box-shadow: 0 0 20px $color-primary, 
+                    0 0 40px $color-primary,
+                    0 0 60px $color-primary,
+                    0 0 80px $color-primary,
+                    0 0 100px $color-primary,
+                    0 0 0 5px rgba(3,169,244,.1);
+    }
+}
+@keyframes loading-animation{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes load-bodyContent{
+    0%{
+        display: none;
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes load {
+    0% {
+
+    }
+    100% {
+
+    }
+}
+@keyframes animateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+    

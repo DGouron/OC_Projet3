@@ -1,0 +1,36 @@
+.restaurant__title{
+    align-self: flex-start;
+    color: black;
+    font-size: 18px;
+    font-family: $secondary-font;
+    font-weight: 800;
+}
+
+.restaurant__card{
+
+    a figure img{
+        width: 100%;
+        height: 78px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.restaurant__card--new{
+    @extend .restaurant__card;
+}
+.restaurant__card--new::after{
+    content: "Nouveau";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    background: $color-primary;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 78px;
+}
