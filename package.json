@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./src/Assets/Styles/Sass/main.scss:./src/Assets/Styles/css/style.css",
-    "prefix": "postcss ./src/Assets/Styles/css/style.css --use autoprefixer -d ./src/Assets/Styles/css/prefixed/"
+    "sass": "sass --watch ./src/assets/Styles/Sass/main.scss:./src/assets/styles/css/style.css",
+    "prefix": "postcss ./src/assets/styles/css/style.css --use autoprefixer -d ./src/assets/styles/css/prefixed/"
   },
   "repository": {
     "type": "git",

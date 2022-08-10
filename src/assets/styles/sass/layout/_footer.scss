@@ -1,0 +1,15 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 10px;
+    background: #353535;
+    color: $light-color;
+
+    a{
+        text-decoration: none;
+        list-style: none;
+        color: $light-color;
+    }
+}

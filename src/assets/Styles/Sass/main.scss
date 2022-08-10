@@ -1,10 +1,10 @@
-@import "./Utils/variables";
-@import "./Utils/mixins";
-@import "./Components/heroBanner";
-@import "./Layout/nav";
-@import "./Layout/restaurant";
-@import "./Components/restaurantCard";
-@import "./Components/loading";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./components/heroBanner";
+@import "./components/restaurantCard";
+@import "./components/loading";
+@import "./components/navLink";
+@import "./layout/footer";
 
 *{
   box-sizing: border-box;
