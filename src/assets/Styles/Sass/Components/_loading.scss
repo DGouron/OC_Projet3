@@ -1,8 +1,15 @@
 .body__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
     opacity: 1;
     animation-delay: 3s;
     animation-name: load-bodyContent;
     animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 0;
 }
 .loader_container{
     position: fixed;
@@ -33,20 +40,25 @@
     animation-name: load;
     animation-duration: 3s;
 
-    img{
+    h5{
         width: 100%;
         margin: 0;
-        height: auto;
-        filter: opacity(0.6) drop-shadow(0 0 0 $color-primary);
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        font-family: $main-font;
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
+        letter-spacing: .5rem;
         z-index: 2;
     }
     p{
         z-index: 2;
-        text-shadow: 0 0 0 $color-primary;
-        font-size: 20px;
+        font-size: 30px;
+        font-family: $secondary-font;
         font-weight: bold;
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
+        letter-spacing: .5rem;
         color: white;
-        letter-spacing: 1.2px;
     }
 }
 .loader{
@@ -54,38 +66,38 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     box-sizing: border-box;
     filter: drop-shadow(0 0 0 $color-primary);
 
     .face{
         position: absolute;
-        border: 2px solid #121212;
+        border: 2px solid white;
     }
     .face.face1{
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: #090909;
+        background: $color-secondary;
         box-shadow: 0 0 10px rgba(0,0,0,1);
         border-radius: 50%;
-        border-left: 2px solid #ffff00;
-        border-top: 2px solid #ffff00;
-        animation: animateCircle 3s linear infinite;
+        border-left: 2px solid $color-tertiary;
+        border-top: 2px solid $color-tertiary;
+        animation: animateCircle 2s linear infinite;
     }
     .face.face2{
         top: 30px;
         left: 30px;
         right: 30px;
         bottom: 30px;
-        background: #090909;
+        background: #353535;
         box-shadow: 0 0 10px rgba(0,0,0,1);
         border-radius: 50%;
         border-right: 2px solid $color-primary;
         border-bottom: 2px solid $color-primary;
-        animation: animateCircle 3s linear reverse infinite;
+        animation: animateCircle 1s linear reverse infinite;
     }
     .face .circle{
         position: absolute;
@@ -109,12 +121,12 @@
         transform: rotate(-45deg);
     }
     .face.face1 .circle::before{
-        background: #ffff00;
-        box-shadow: 0 0 20px #ff0, 
-                    0 0 40px #ff0,
-                    0 0 60px #ff0,
-                    0 0 80px #ff0,
-                    0 0 100px #ff0,
+        background: $color-secondary;
+        box-shadow: 0 0 20px $color-secondary, 
+                    0 0 40px $color-secondary,
+                    0 0 60px $color-secondary,
+                    0 0 80px $color-secondary,
+                    0 0 100px $color-secondary,
                     0 0 0 5px rgba(255,255,0,.1);
     }
     .face.face2 .circle{
@@ -142,10 +154,12 @@
     0%{
         display: none;
         opacity: 0;
+        z-index: 2000;
     }
     100%{
         display: block;
         opacity: 1;
+        z-index: 2000;
     }
 }
 

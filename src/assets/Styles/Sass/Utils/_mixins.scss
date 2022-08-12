@@ -1,0 +1,6 @@
+@mixin CustomLink($weight, $size: 1rem, $famillyName, $color, $margin: 0, $padding: 0, $textDecoration : 'none'){
+    font-family: $famillyName;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
