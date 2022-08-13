@@ -211,7 +211,6 @@
   font-size: 2rem;
   font-family: "Shrikhand", cursive;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-  letter-spacing: 0.5rem;
   z-index: 2;
 }
 .loader__content p {
@@ -220,7 +219,6 @@
   font-family: Roboto, sans-serif;
   font-weight: bold;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-  letter-spacing: 0.5rem;
   color: white;
 }
 
@@ -295,6 +293,10 @@
   box-shadow: 0 0 20px #9356DC, 0 0 40px #9356DC, 0 0 60px #9356DC, 0 0 80px #9356DC, 0 0 100px #9356DC, 0 0 0 5px rgba(3, 169, 244, 0.1);
 }
 
+.tracking-in-contract {
+  animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
 @keyframes loading-animation {
   0% {
     opacity: 1;
@@ -322,6 +324,32 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+    opacity: 1;
   }
 }
 nav {
@@ -389,6 +417,64 @@ nav {
 .nav__link--icone {
   color: grey;
   font-size: 20px;
+}
+
+.menu__header {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  gap: 20px;
+  width: 100%;
+  height: 3.9rem;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  z-index: 0;
+}
+.menu__header .menu__header--logo {
+  width: 100%;
+  z-index: 0;
+}
+.menu__header .menu__header--arrow {
+  flex: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.menu__header .menu__header--arrow a i {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.menu__illustration {
+  width: 100%;
+}
+.menu__illustration img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.menu__wrapper {
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  background: white;
+  transform: translateY(-35px);
+  color: black;
+}
+.menu__wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+.menu__wrapper header h1 {
+  font-size: 1.8rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  text-shadow: 0 0 black;
 }
 
 footer {

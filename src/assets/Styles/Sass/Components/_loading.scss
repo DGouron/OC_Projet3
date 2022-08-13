@@ -49,7 +49,6 @@
         font-size: 2rem;
         font-family: $main-font;
         text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
-        letter-spacing: .5rem;
         z-index: 2;
     }
     p{
@@ -58,7 +57,6 @@
         font-family: $secondary-font;
         font-weight: bold;
         text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
-        letter-spacing: .5rem;
         color: white;
     }
 }
@@ -143,6 +141,9 @@
                     0 0 0 5px rgba(3,169,244,.1);
     }
 }
+.tracking-in-contract {
+	        animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
 @keyframes loading-animation{
     0%{
         opacity: 1;
@@ -180,4 +181,30 @@
         transform: rotate(360deg);
     }
 }
-    
+ @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: .5rem;
+      opacity: 1;
+    }
+  }
+  
