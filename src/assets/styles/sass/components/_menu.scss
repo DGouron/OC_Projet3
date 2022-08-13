@@ -37,6 +37,11 @@
   }
 
   .menu__wrapper{
+
+    .restaurant__card--heart{ /*Override padding for heart a top of the page*/
+      padding-top: 30px;
+    }
+
     width: 100%;
     border-radius: 40px 40px 0 0;
     background: $light-color;
@@ -93,44 +98,66 @@
     margin-right: 10px;
     box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.2);
     font-family: $secondary-font;
-    transition: all 0.3s ease-in-out;
+    
 
     .menu__article--content{
       display: flex;
       flex-direction: column;
-      flex: 1 1 40%;
-    }
-
-    .menu__article--validation{
-      flex: 0 0 0%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: $color-tertiary;
-      width: 100%;
-      margin: 0;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      transition: 2s;
+      flex: 1 1 25%;
+      gap: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
 
     &:hover{
       box-shadow: 0px 7px 10px 2px rgba(0,0,0,0.4);
+      cursor: pointer;
 
+      .menu__article--content h3{
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+      }
       .menu__article--validation{
         flex: 0 0 15%;
-        cursor: pointer;
+
+        i{
+          transform: rotate(0deg);
+        }
       }
     }
+
     h3{
-      width: 85%;
+      max-width: 85%;
       font-size: 1.18rem;
-      word-wrap: normal;
-      text-overflow: ellipsis;
+      text-overflow: ellipsis;  
       margin: 0;
       padding: 0;
       padding-top: 15px;
+
+    }
+  }
+  .menu__article--validation{
+    flex: 0 0 0%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-tertiary;
+    width: 100%;
+    margin: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: 1s;
+
+    i{
+      font-size: 1rem;
+      color: $color-tertiary;
+      background: white;
+      border-radius: 50%;
+      transition: all 1s linear;
+      transform: rotate(360deg);
+      padding: 5px;
     }
   }
   .menu__article--details{
