@@ -1,3 +1,5 @@
+@import "../utils/keyframe";
+
 .body__content{
     position: absolute;
     width: 100%;
@@ -37,9 +39,6 @@
     align-items: center;
     width: 300px;
     height: 150px;
-    animation-delay: 0s;
-    animation-name: load;
-    animation-duration: 3s;
 
     h5{
         width: 100%;
@@ -144,67 +143,5 @@
 .tracking-in-contract {
 	        animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-@keyframes loading-animation{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes load-bodyContent{
-    0%{
-        display: none;
-        opacity: 0;
-        z-index: 2000;
-    }
-    100%{
-        display: block;
-        opacity: 1;
-        z-index: 2000;
-    }
-}
 
-@keyframes load {
-    0% {
-
-    }
-    100% {
-
-    }
-}
-@keyframes animateCircle {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
- @-webkit-keyframes tracking-in-contract {
-    0% {
-      letter-spacing: 1em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      letter-spacing: normal;
-      opacity: 1;
-    }
-  }
-  @keyframes tracking-in-contract {
-    0% {
-      letter-spacing: 1em;
-      opacity: 0;
-    }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      letter-spacing: .5rem;
-      opacity: 1;
-    }
-  }
   

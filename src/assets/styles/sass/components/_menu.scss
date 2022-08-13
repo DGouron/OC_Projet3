@@ -1,3 +1,5 @@
+@import "../utils/keyframe";
+
 .menu__header{
     display: flex;
     align-items: center;
@@ -180,4 +182,14 @@
     .link__calltoaction{
       margin: 50px 25% 30px 25%;
     }
+  }
+  
+  @for $index from 1 to 12 { /*Target all cards for the menu and add delayed animation*/
+    .menu__wrapper .menu__article--box:nth-of-type(#{$index}) {
+      animation-delay: #{$index * 0.2}s;
+      animation-name: slide-in-top;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+      animation-duration: 1.2s;
+      }
   }

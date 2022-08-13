@@ -206,6 +206,57 @@
     flex: 1 1 15%;
   }
 }
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+    opacity: 1;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes load-bodyContent {
+  0% {
+    display: none;
+    opacity: 0;
+    z-index: 2000;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    z-index: 2000;
+  }
+}
+@keyframes animateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .body__content {
   position: absolute;
   width: 100%;
@@ -247,9 +298,6 @@
   align-items: center;
   width: 300px;
   height: 150px;
-  animation-delay: 0s;
-  animation-name: load;
-  animation-duration: 3s;
 }
 .loader__content h5 {
   width: 100%;
@@ -345,61 +393,6 @@
   animation: tracking-in-contract 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-@keyframes loading-animation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes load-bodyContent {
-  0% {
-    display: none;
-    opacity: 0;
-    z-index: 2000;
-  }
-  100% {
-    display: block;
-    opacity: 1;
-    z-index: 2000;
-  }
-}
-@keyframes load {}
-@keyframes animateCircle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: 0.5rem;
-    opacity: 1;
-  }
-}
 nav {
   display: flex;
   flex-direction: column;
@@ -485,6 +478,57 @@ nav {
   }
   .nav__link {
     flex: 1 1 30%;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+    opacity: 1;
+  }
+}
+@keyframes loading-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes load-bodyContent {
+  0% {
+    display: none;
+    opacity: 0;
+    z-index: 2000;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    z-index: 2000;
+  }
+}
+@keyframes animateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .menu__header {
@@ -657,6 +701,105 @@ nav {
 
 .menu__wrapper .link__calltoaction, .menu__wrapper .hero__banner a, .hero__banner .menu__wrapper a {
   margin: 50px 25% 30px 25%;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(1) {
+  animation-delay: 0.2s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(2) {
+  animation-delay: 0.4s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(3) {
+  animation-delay: 0.6s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(4) {
+  animation-delay: 0.8s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(5) {
+  animation-delay: 1s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(6) {
+  animation-delay: 1.2s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(7) {
+  animation-delay: 1.4s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(8) {
+  animation-delay: 1.6s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(9) {
+  animation-delay: 1.8s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(10) {
+  animation-delay: 2s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
+}
+
+/*Target all cards for the menu and add delayed animation*/
+.menu__wrapper .menu__article--box:nth-of-type(11) {
+  animation-delay: 2.2s;
+  animation-name: slide-in-top;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-duration: 1.2s;
 }
 
 footer {

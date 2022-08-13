@@ -1,0 +1,52 @@
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: .5rem;
+      opacity: 1;
+    }
+  }
+  @keyframes loading-animation{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes load-bodyContent{
+    0%{
+        display: none;
+        opacity: 0;
+        z-index: 2000;
+    }
+    100%{
+        display: block;
+        opacity: 1;
+        z-index: 2000;
+    }
+}
+@keyframes animateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
