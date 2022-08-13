@@ -82,6 +82,10 @@
   margin-bottom: 20px;
   background: white;
   box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.restaurant__card:hover {
+  box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.4);
 }
 .restaurant__card a {
   text-decoration: none;
@@ -136,7 +140,31 @@
 
 .restaurant__card--heart {
   font-size: 1.7rem;
-  opacity: 0.5;
+  opacity: 1;
+}
+.restaurant__card--heart i, .restaurant__card--heart svg {
+  cursor: pointer;
+}
+.restaurant__card--heart i {
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+  transition-property: opacity;
+}
+.restaurant__card--heart svg { /*Hide the second heart, its for animation*/
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: -28px;
+  fill: url(#heart-gradient) #9356DC;
+  transform: scale(0);
+  transition: opacity 0.4s, transform 1s;
+}
+.restaurant__card--heart:hover i {
+  opacity: 0;
+}
+.restaurant__card--heart:hover svg {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .label__new {
@@ -395,6 +423,14 @@ nav {
   border-radius: 20px;
   box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.2);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.nav__link:hover, .nav__link:active {
+  background: #f5edff;
+  box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.nav__link:hover .nav__link--icone, .nav__link:active .nav__link--icone {
+  color: #9356DC;
 }
 
 .nav__title {
@@ -527,20 +563,45 @@ nav {
 
 .menu__article--box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: auto;
   min-height: 70px;
   border-radius: 15px;
   background: #FFF;
   gap: 5px;
-  padding-right: 25px;
   padding-left: 10px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.2);
   font-family: Roboto, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.menu__article--box .menu__article--content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+}
+.menu__article--box .menu__article--validation {
+  flex: 0 0 0%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  width: 100%;
+  margin: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 2s;
+}
+.menu__article--box:hover {
+  box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.menu__article--box:hover .menu__article--validation {
+  flex: 0 0 15%;
+  cursor: pointer;
 }
 .menu__article--box h3 {
   width: 85%;

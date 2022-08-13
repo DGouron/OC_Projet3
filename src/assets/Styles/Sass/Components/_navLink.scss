@@ -20,6 +20,13 @@ nav{
     border-radius: 20px;
     box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.2);
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, &:active{
+        background: #f5edff;
+        box-shadow: 0px 7px 10px 2px rgba(0,0,0,0.4);
+        .nav__link--icone{color: $color-primary;}
+    }
 }
 .nav__title{
     align-self: flex-start;
