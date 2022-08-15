@@ -204,7 +204,7 @@
 .restaurant__card--heart svg { /*Hide the second heart, its for animation*/
   display: block;
   opacity: 0;
-  position: initial;
+  position: inherit;
   margin-top: -28px;
   fill: url(#heart-gradient) #9356DC;
   -webkit-transform: scale(0);
