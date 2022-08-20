@@ -911,7 +911,7 @@ nav {
           justify-content: space-between;
   padding-left: 10px;
 }
-.menu__wrapper header i {
+.menu__wrapper header .restaurant__card--heart {
   padding-left: 20px;
   padding-right: 40px;
 }
