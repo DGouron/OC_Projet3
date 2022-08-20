@@ -7,7 +7,7 @@
   width: auto;
   height: 50px;
   background: linear-gradient(170deg, #ff79da, #9356dc);
-  box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.929);
   font-size: 1.05rem;
   font-family: Roboto, sans-serif;
@@ -665,7 +665,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-left: 10px;
+}
+.menu__wrapper header i {
   padding-left: 20px;
   padding-right: 40px;
 }
@@ -702,35 +704,40 @@ nav {
   border-radius: 15px;
   background: #FFF;
   gap: 5px;
-  padding-left: 10px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.2);
   font-family: Roboto, sans-serif;
+  overflow: hidden;
+}
+.menu__article--box .menu__article--content, .menu__article--box .menu__article--content h3 {
+  white-space: nowrap;
+  display: block;
+}
+.menu__article--box .menu__article--content h3 {
+  overflow: visible;
 }
 .menu__article--box .menu__article--content {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 25%;
-  gap: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
+  flex: 1;
+  padding-bottom: 1rem;
+  overflow: hidden;
 }
 .menu__article--box:hover {
   box-shadow: 0px 7px 10px 2px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
-.menu__article--box:hover .menu__article--content h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-}
 .menu__article--box:hover .menu__article--validation {
-  flex: 0 0 25%;
+  flex: 0 0 20%;
 }
 .menu__article--box:hover .menu__article--validation i {
   transform: rotate(0deg);
+}
+.menu__article--box:hover .menu__article--price {
+  padding-left: 1rem;
+}
+.menu__article--box:hover .menu__article--content h3 {
+  overflow: hidden;
 }
 .menu__article--box h3 {
   max-width: 85%;
@@ -764,12 +771,6 @@ nav {
   padding: 5px;
 }
 
-.menu__article--details {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 15px;
-}
-
 .menu__article--name {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -779,12 +780,26 @@ nav {
 
 .menu__article--name, .menu__article--price {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
 }
 
 .menu__article--price {
   font-size: 1.1rem;
   font-weight: bolder;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 1rem;
+  padding-left: 0rem;
+  padding-bottom: 1rem;
+  transition: padding-left 0.5s linear;
+}
+
+.menu__article--description {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu__wrapper .menu__article--box:nth-of-type(3n) {
@@ -974,6 +989,7 @@ html,
 body {
   scroll-behavior: smooth;
   color: white;
+  overflow-x: hidden;
 }
 
 .primary__header {
